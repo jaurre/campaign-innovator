@@ -24,6 +24,7 @@ import { Module, useModules } from "@/contexts/module-context";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Switch } from "@/components/ui/switch";
 import { Label } from "@/components/ui/label";
+import { cn } from "@/lib/utils";
 
 export function AppSidebar() {
   const { activeModule, setActiveModule, enabledModules, toggleModule } = useModules();
@@ -51,7 +52,7 @@ export function AppSidebar() {
           <SidebarGroupContent>
             <SidebarMenu>
               {menuItems.map((item) => (
-                <SidebarMenuItem key={item.title} active={activeModule === item.module}>
+                <SidebarMenuItem key={item.title} className={cn(activeModule === item.module ? "bg-accent/10" : "")}>
                   <SidebarMenuButton 
                     disabled={!enabledModules[item.module]}
                     onClick={() => setActiveModule(item.module)}

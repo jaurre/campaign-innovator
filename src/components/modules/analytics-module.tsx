@@ -1,4 +1,3 @@
-
 import { 
   Card, 
   CardContent, 
@@ -7,7 +6,7 @@ import {
   CardTitle 
 } from "@/components/ui/card";
 import { 
-  BarChart, 
+  BarChart as BarChartIcon, 
   BarChartHorizontal, 
   Calendar, 
   Info, 
@@ -18,6 +17,7 @@ import {
   Area,
   AreaChart,
   Bar,
+  BarChart,
   CartesianGrid,
   Cell,
   ComposedChart,
@@ -37,7 +37,6 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 
-// Mock data for performance metrics
 const performanceData = [
   { name: "Lun", engagement: 120, clicks: 20, reach: 800 },
   { name: "Mar", engagement: 180, clicks: 35, reach: 1200 },
@@ -90,7 +89,7 @@ export function AnalyticsModule() {
       <Card className="mb-6">
         <CardHeader>
           <div className="flex items-center gap-2">
-            <BarChart className="h-6 w-6 text-accent" />
+            <BarChartIcon className="h-6 w-6 text-accent" />
             <CardTitle className="text-2xl">Análisis Estratégico</CardTitle>
           </div>
           <CardDescription>
